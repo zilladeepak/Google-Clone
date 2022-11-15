@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav,footer{
+    flex-shrink: 0;
+}
+section{
+    flex-grow: 1;
+}
+body{
+    width: 100vw;
+    background-color: #202124;
+    color: white;
+    font-family: Arial,sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:underline;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+nav ul li{
+    list-style: none;
+    color:white;
+}
+
+nav ul li a{
+    height: 24px;
+    width: 2rem;
+    font-size: 13px;
+    padding-right: 15px;
+}
+.accounts{
+    margin-top: 8px;
+    border-radius: 50%;
+}
+.accounts:hover{
+    box-shadow: 0 0 0 4px #303134;
+}
+.lang a{
+    font-size: 13px;
+    color: #8AB4F8;
+    padding: 3px;
+}
+.menu{
+    fill:white;
+    width:24px;
+    height:24px;
+    padding: 8px;
+    margin-top: 6px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.space{
+    width: 100%;
+    height:1rem;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goo-img{
+    padding-top: 3rem;
+    height: 5.8rem;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+.share{
+    cursor: pointer;
+    vertical-align: bottom;
+    align-self: flex-end;
+    display: none;
+}
+
+
+.sear-btn{
+    justify-content: center;
+    padding: 20px;
+}
+
+.search svg{
+    width:20px;
+    height: 20px;
+    fill: #8B9096;
+    align-self: center;
+    display: none;
+}
+input{
+    margin: 0 auto;
+    width: 30rem;
+    height: 2rem;
+    display: block;
+}
+input[type=text]:hover{
+    background-color: #303134;
+}
+input[type=text]{
+    background-color:#202124;
+    border: 1px solid #8B9096;
+    border-radius: 20px;
+    padding: 5px 25px;
+    color: white;
+}
+.butn{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.butn button{
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #303134;
+    min-width:8rem;
+    height: 2rem;
+    font-size: 14px;
+    color: white;
+    background-color: #303134;
+    margin:15px 5px;
+    display: inline;
+    padding: 0 1rem;
+}
+
+.lang{
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.langspace{
+    color: #BDC1BC;
+    padding-right:5px;
+    flex-wrap: wrap;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #171717;
+}
+
+footer li{
+    padding: 15px;
+    list-style: none;
+    display: inline;
+}
+
+.india{
+    font-size: 14px;
+    padding:15px 30px;
+    color: #BDC1BC;
+    border-bottom: 1px solid #3C4043;
+}
+
+.others{
+    font-size: 14px;
+    display: flex;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.others ul a{
+    color: #BDC1BC;
+}
+.left{
+    padding: 15px;
+    padding-left: 0;
+}
+.right{
+    padding: 15px;
+}
+.copyright{
+    padding: 15px;
+    color: #BDC1BC;
+    text-align: center;
+}
