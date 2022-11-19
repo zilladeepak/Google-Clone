@@ -2,6 +2,30 @@
     padding: 0;
     margin: 0;
 }
+
+:root{
+    --text-color:white;
+    --background-color:#202124;
+    --hover-color:#303134;
+    --button-bgcolor:#303134;
+    --link-text:#BDC1BC;
+    --link-color:#8AB4F8;
+    --footer-color:#171717;
+    --footer-tcolor:#BDC1BC;
+}
+
+.light-theme {
+    --text-color:#000000;
+    --background-color: #ffffff;
+    --button-bgcolor:#F8F9FA;
+    --hover-color:#eee;
+    --link-text: #000000;
+    --link-color: #1A0DAB;
+    --footer-color: #f2f2f2;
+    --footer-tcolor:#81857A;
+}
+
+
 nav,footer{
     flex-shrink: 0;
 }
@@ -10,13 +34,13 @@ section{
 }
 body{
     width: 100vw;
-    background-color: #202124;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial,sans-serif;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     cursor: pointer;
 }
 a:hover{
@@ -44,15 +68,15 @@ nav ul li a{
     border-radius: 50%;
 }
 .accounts:hover{
-    box-shadow: 0 0 0 4px #303134;
+    box-shadow: 0 0 0 4px var(--hover-color);
 }
 .lang a{
     font-size: 13px;
-    color: #8AB4F8;
+    color: var(--link-color);
     padding: 3px;
 }
 .menu{
-    fill:white;
+    fill:var(--text-color);
     width:24px;
     height:24px;
     padding: 8px;
@@ -78,62 +102,88 @@ nav ul li a{
     max-height: 100%;
     max-width: 100%;
 }
-.share{
-    cursor: pointer;
-    vertical-align: bottom;
-    align-self: flex-end;
-    display: none;
+
+
+.searchbarcontainer{
+    text-align: center;
+    margin-top: 22px;
+    position: relative;
 }
 
-
-.sear-btn{
-    justify-content: center;
-    padding: 20px;
-}
-
-.search svg{
+.searchbarcontainer svg{
     width:20px;
     height: 20px;
     fill: #8B9096;
-    align-self: center;
-    display: none;
 }
-input{
-    margin: 0 auto;
+
+.search{
+    position: absolute;
+    padding: 10px 15px;
+}
+
+.voicediv{
+    width: 20px;
+    height: 20px;
+    display: inline;
+    position: relative;
+}
+
+.voice{
+    position: absolute;
+    padding: 10px 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#search-bar:hover{
+    background-color: var(--hover-color);
+    outline: 0;
+    border: 1px solid transparent;
+}
+
+
+#search-bar{
     width: 30rem;
     height: 2rem;
-    display: block;
-}
-input[type=text]:hover{
-    background-color: #303134;
-}
-input[type=text]{
-    background-color:#202124;
+    outline: 0;
+    background-color:var(--background-color);
     border: 1px solid #8B9096;
-    border-radius: 20px;
-    padding: 5px 25px;
-    color: white;
+    border-radius: 200px;
+    padding: 5px 45px;
+    color: var(--text-color);
+    box-shadow: none;
 }
+
+
 .butn{
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 18px;
 }
+
+
 .butn button{
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid #303134;
+    border: 1px solid var(--button-bgcolor);
     min-width:8rem;
-    height: 2rem;
+    height: 100%;
     font-size: 14px;
-    color: white;
-    background-color: #303134;
+    color: var(--text-color);
+    background-color: var(--button-bgcolor);
     margin:15px 5px;
     display: inline;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 }
 
+
+button:hover{
+    border: 1px solid #8B9096;
+}
+
+
 .lang{
+    margin-top: 7px;
     font-size: 13px;
     display: flex;
     flex-wrap: wrap;
@@ -142,29 +192,41 @@ input[type=text]{
 }
 
 .langspace{
-    color: #BDC1BC;
+    color: var(--link-text);
     padding-right:5px;
     flex-wrap: wrap;
 }
 
+
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #171717;
+    background-color: var(--footer-color);
 }
 
 footer li{
-    padding: 15px;
+    padding: 5px;
     list-style: none;
     display: inline;
 }
 
 .india{
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
     padding:15px 30px;
-    color: #BDC1BC;
+    color: var(--footer-tcolor);
     border-bottom: 1px solid #3C4043;
+}
+
+#icon{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
 }
 
 .others{
@@ -175,8 +237,11 @@ footer li{
     justify-content: space-between;
 }
 
+.others ul li{
+    margin:10px;
+}
 .others ul a{
-    color: #BDC1BC;
+    color: var(--footer-tcolor);
 }
 .left{
     padding: 15px;
@@ -186,7 +251,14 @@ footer li{
     padding: 15px;
 }
 .copyright{
-    padding: 15px;
-    color: #BDC1BC;
+    padding: 5px;
+    color: var(--footer-tcolor);
     text-align: center;
+}
+
+
+@media only screen and (max-width:600px) {
+    #search-bar{
+        width: 80%;
+    }
 }
