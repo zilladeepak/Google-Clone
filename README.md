@@ -1,8 +1,9 @@
 # Google-clone-HTML-CSS
 - Cloning projects are the one of the best way to learn Web Devlopmemt and I have done it 🤩.
 - Google clone is my first clone project and I am happy to share this.
+- Here is the <a href="https://zilladeepak.github.io/Google-Clone/"/>link</a> to it.
 - It was done using HTML, CSS layouts[FlexBox].
-- Used Some javascript to change the theme 😁.
+- Used Some javascript to change the theme and input **Google Search** 😁.
 - Any contributions always welcome.
 
 ### Output
