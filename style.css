@@ -119,6 +119,7 @@ nav ul li a{
 .search{
     position: absolute;
     padding: 10px 15px;
+    cursor: pointer;
 }
 
 .voicediv{
@@ -144,6 +145,7 @@ nav ul li a{
 
 #search-bar{
     width: 30rem;
+    font-size: 1rem;
     height: 2rem;
     outline: 0;
     background-color:var(--background-color);
